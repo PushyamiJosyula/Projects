@@ -1,0 +1,27 @@
+<p>question works!</p>
+Enter ExamId: <input type=number [(ngModel)]="ExamId"><br>
+Enter LevelId: <input type=number [(ngModel)]="LevelId"><br>
+<button (click)="findQuestionsByExamIdLevelId(ExamId,LevelId)">Find All Questions</button>
+<table border="15">
+    <tr *ngFor="let result of tempQuestion">
+        <td>{{result.qsNo}}</td>
+        <td>{{result.crctOpt}}</td>
+        <td>{{result.opta}}</td>
+        <td>{{result.optb}}</td>
+        <td>{{result.optc}}</td>
+        <td>{{result.optd}}</td>
+        <td>{{result.question}}</td>
+    </tr>
+</table>
+<!-- enter ExamId<input type=text [(ngModel)]="exam.examId"><br>
+enter LevelId<input type=text [(ngModel)]="level.levelId"><br> -->
+
+enter qsNo<input type=text [(ngModel)]="quest.qsNo"><br>
+enter question<input type=text [(ngModel)]="quest.question"><br>
+enter optA<input type=text [(ngModel)]="quest.opta"><br>
+enter optB<input type=text [(ngModel)]="quest.optb"><br>
+enter optC<input type=text [(ngModel)]="quest.optc"><br>
+enter optD<input type=text [(ngModel)]="quest.optd"><br>
+enter crctOpt<input type=text [(ngModel)]="quest.crctOpt"><br>
+<button (click)="addQuestion(quest)">Add Question</button>
+
